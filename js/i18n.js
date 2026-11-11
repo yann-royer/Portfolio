@@ -14,9 +14,8 @@ const translations = {
     "nav.about": "About",
     "nav.contact": "Contact",
     "hero.eyebrow": "Portfolio · Robotics & prototyping",
-    "hero.title": "I build small machines from scratch: the parts, the electronics and the code.",
-    "hero.lead":
-      "I design the parts in CAD, 3D print them, wire the electronics and write the Arduino code. Everything on this site is a prototype I actually built and tested.",
+    "hero.title": "I study robotics at ETH Zurich and build machines, from the CAD model to the code.",
+    "hero.lead": "My personal projects are prototypes I built and tested myself, mostly with SolidWorks, 3D printing and Arduino. At EPFL and ETH I have worked on flexure mechanisms, embedded systems, motion planning and probabilistic machine learning.",
     "hero.ctaProjects": "View projects",
     "hero.ctaContact": "Contact",
     "hero.caption": "Master's in robotics · ETH Zurich",
@@ -469,10 +468,8 @@ const translations = {
     "nav.about": "À propos",
     "nav.contact": "Contact",
     "hero.eyebrow": "Portfolio · Robotique & prototypage",
-    "hero.title":
-      "Je fabrique de petites machines de A à Z : les pièces, l’électronique et le code.",
-    "hero.lead":
-      "Je dessine les pièces en CAO, je les imprime en 3D, je fais le câblage et j’écris le code Arduino. Tout ce qui est sur ce site, ce sont des prototypes que j’ai vraiment construits et testés.",
+    "hero.title": "J’étudie la robotique à l’ETH Zurich et je construis des machines, du modèle CAO jusqu’au code.",
+    "hero.lead": "Mes projets personnels sont des prototypes que j’ai construits et testés moi-même, surtout avec SolidWorks, l’impression 3D et Arduino. À l’EPFL et à l’ETH, j’ai travaillé sur des mécanismes flexibles, des systèmes embarqués, la planification de mouvement et l’apprentissage automatique probabiliste.",
     "hero.ctaProjects": "Voir les projets",
     "hero.ctaContact": "Contact",
     "hero.caption": "Master en robotique · ETH Zurich",
@@ -930,10 +927,8 @@ const translations = {
     "nav.about": "Über mich",
     "nav.contact": "Kontakt",
     "hero.eyebrow": "Portfolio · Robotik & Prototypen",
-    "hero.title":
-      "Ich baue kleine Maschinen von Grund auf: die Teile, die Elektronik und den Code.",
-    "hero.lead":
-      "Ich konstruiere die Teile im CAD, drucke sie in 3D, verdrahte die Elektronik und schreibe den Arduino-Code. Alles auf dieser Seite sind Prototypen, die ich wirklich gebaut und getestet habe.",
+    "hero.title": "Ich studiere Robotik an der ETH Zürich und baue Maschinen, vom CAD-Modell bis zum Code.",
+    "hero.lead": "Meine persönlichen Projekte sind Prototypen, die ich selbst gebaut und getestet habe, meist mit SolidWorks, 3D-Druck und Arduino. An der EPFL und der ETH habe ich an Festkörpermechanismen, eingebetteten Systemen, Bewegungsplanung und probabilistischem maschinellem Lernen gearbeitet.",
     "hero.ctaProjects": "Projekte ansehen",
     "hero.ctaContact": "Kontakt",
     "hero.caption": "Master in Robotik · ETH Zürich",
