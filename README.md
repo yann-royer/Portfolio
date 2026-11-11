@@ -257,7 +257,32 @@ Les fichiers sont appelés avec un numéro de version (`styles.css?v=25`, `main.
 
 ## Mise en ligne
 
-Le site est 100 % statique, n'importe quel hébergeur gratuit convient : GitHub Pages, Netlify, Vercel, Cloudflare Pages… On envoie le dossier tel quel, `index.html` à la racine.
+Le site est 100 % statique et hébergé avec **GitHub Pages**. Le dossier est un dépôt git (branche `main`). Le fichier `.gitignore` exclut ce qui ne doit pas être publié (`.claude/`, `layouts/`, `assets/img/creasoft/`, `css/styles.old.css`), et `.nojekyll` demande à GitHub de servir les fichiers tels quels.
+
+### Première publication (une seule fois)
+
+1. Sur github.com, créer un dépôt **public** nommé `Portfolio`, sans README ni licence (le dépôt doit être vide).
+2. Dans un terminal, dans le dossier du site :
+
+   ```bash
+   git remote add origin https://github.com/yann-royer/Portfolio.git
+   git push -u origin main
+   ```
+
+3. Sur GitHub : **Settings → Pages → Build and deployment → Source : Deploy from a branch**, choisir `main` et `/ (root)`, puis **Save**.
+4. Après une à deux minutes, le site est en ligne à <https://yann-royer.github.io/Portfolio/>.
+
+### Mettre à jour le site
+
+Après chaque modification :
+
+```bash
+git add -A
+git commit -m "Ce qui a changé"
+git push
+```
+
+Le site en ligne se met à jour en environ une minute. Penser à augmenter les numéros de version des fichiers CSS/JS (voir plus haut), sinon les visiteurs peuvent garder l'ancienne version en cache.
 
 Avant de publier, penser à :
 - compresser les photos (le format WebP ou une largeur max d'environ 1600 px allège beaucoup la page) ;
