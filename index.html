@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yann Royer — Robotics portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Yann Royer, master's student in robotics and control at ETH Zurich: personal prototypes and school projects."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=41" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f55c6' width='100' height='100' rx='6'/><text x='50' y='64' text-anchor='middle' font-size='46' font-weight='700' font-family='Arial Narrow, Arial, sans-serif' fill='%23ffffff'>YR</text></svg>" />
+  </head>
+  <body data-title-key="meta.title" data-desc-key="meta.desc">
+    <a class="skip-link" href="#contenu" data-i18n="skip">Skip to content</a>
+
+    <div id="haut" class="top-anchor" tabindex="-1"></div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="#haut">Yann Royer</a>
+        <nav id="menu" class="nav" aria-label="Primary">
+          <a href="#projets" data-i18n="nav.projects">Projects</a>
+          <a href="#competences" data-i18n="nav.skills">Skills</a>
+          <a href="#apropos" data-i18n="nav.about">About</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+            <button type="button" data-lang="de" aria-pressed="false">DE</button>
+          </div>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+            <span class="sr-only" data-i18n="menu">Menu</span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <h1 data-i18n="hero.title">I build small machines from scratch: the parts, the electronics and the code.</h1>
+            <p class="lead" data-i18n="hero.lead">
+              I design the parts in CAD, 3D print them, wire the electronics and write the Arduino code. Everything on this site is a prototype I actually built and tested.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projets" data-i18n="hero.ctaProjects">View projects</a>
+              <a class="btn btn-ghost" href="#contact" data-i18n="hero.ctaContact">Contact</a>
+            </div>
+            <ul class="skill-row" aria-label="Skills">
+              <li data-i18n="skill.print">3D printing</li>
+              <li>Arduino</li>
+              <li>SolidWorks</li>
+              <li>FPV</li>
+              <li>Firmware</li>
+            </ul>
+          </div>
+          <figure class="hero-portrait">
+            <img
+              src="assets/img/profile.jpg"
+              alt="Portrait of Yann Royer"
+              data-i18n-alt="hero.alt"
+              width="640"
+              height="640"
+            />
+            <figcaption>
+              <span>Yann Royer</span>
+              <span data-i18n="hero.caption">Master's in robotics · ETH Zurich</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="affiliations" aria-labelledby="affiliations-title">
+        <div class="wrap affiliations-inner">
+          <h2 class="affiliations-title" id="affiliations-title" data-i18n="aff.title">Schools and teams</h2>
+          <ul class="logo-row">
+            <li>
+              <a href="https://ethz.ch/en.html" rel="noreferrer noopener" target="_blank">
+                <img class="logo-eth" src="assets/img/logos/eth.svg" alt="ETH Zurich" width="120" height="20" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.ethrobotics.ch/" rel="noreferrer noopener" target="_blank">
+                <img class="logo-ethrc" src="assets/img/logos/ethrc.png" alt="ETH Robotics Club" width="640" height="133" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.epfl.ch/en/" rel="noreferrer noopener" target="_blank">
+                <img class="logo-epfl" src="assets/img/logos/epfl.png?v=2" alt="EPFL" width="533" height="155" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.epflracingteam.ch/en" rel="noreferrer noopener" target="_blank">
+                <img class="logo-racing" src="assets/img/logos/racing-team.png" alt="EPFL Racing Team" width="640" height="261" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="projets" id="projets">
+        <div class="wrap">
+          <header class="section-head section-head-center">
+            <h2 data-i18n="projects.title">Personal work and school work.</h2>
+          </header>
+        </div>
+
+        <div class="split-gate" aria-label="Project categories">
+          <a class="split-panel split-personal" href="personal.html">
+            <img src="assets/img/home/c1.jpg" alt="Cover for personal projects" data-i18n-alt="split.personal.alt" />
+            <span class="split-copy">
+              <span class="split-title" data-i18n="split.personal">Personal projects</span>
+              <span class="split-cta" data-i18n="split.cta">View work</span>
+            </span>
+          </a>
+          <a class="split-panel split-school" href="school.html">
+            <img src="assets/img/home/c2.jpg" alt="Cover for school projects" data-i18n-alt="split.school.alt" />
+            <span class="split-copy">
+              <span class="split-title" data-i18n="split.school">School projects</span>
+              <span class="split-cta" data-i18n="split.cta">View work</span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="skills" id="competences" aria-labelledby="skills-title">
+        <div class="wrap">
+          <header class="section-head">
+            <h2 id="skills-title" data-i18n="skills.title">Skills, and the projects that use them.</h2>
+            <p class="lead" data-i18n="skills.lead">Pick a skill to see every project where I used it.</p>
+          </header>
+          <div class="skill-index" id="skill-index-home">
+            <p><a href="skills.html">See all skills</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="apropos">
+        <div class="wrap about-grid">
+          <div>
+            <h2 data-i18n="about.title">I like building things that actually work.</h2>
+            <p data-i18n="about.p1">
+              I'm doing a master's in robotics and control at ETH Zurich. I'm into mechanics, electronics and programming, and most of my personal projects mix all three. I built each of them on my own: I designed the parts in SolidWorks, 3D printed them, did the wiring and wrote the code.
+            </p>
+            <p data-i18n="about.p2">
+              The RC Car is the biggest project: a PLA chassis with a zinc body, brushless motors, a radio link and an FPV camera. GoRider, the Lap Timer and the Alarm Clock Enhancer are smaller devices, made to be used at the track or at home.
+            </p>
+          </div>
+          <aside class="about-card">
+            <p class="about-kicker" data-i18n="about.kicker">What I work with</p>
+            <ul>
+              <li data-i18n="about.li1">CAD (SolidWorks) and 3D printing (PLA, TPU)</li>
+              <li data-i18n="about.li2">Sheet metal / zinc, screws, assemblies</li>
+              <li data-i18n="about.li3">Arduino (UNO, Pro Mini), ESC, radio, FPV</li>
+              <li data-i18n="about.li4">Sensors: ultrasonic, light, laser</li>
+              <li data-i18n="about.li5">LCD / joystick / relay interfaces</li>
+              <li data-i18n="about.li6">Embedded firmware</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="wrap education">
+          <h3 data-i18n="edu.title">Education</h3>
+          <ol class="edu-list">
+            <li>
+              <span class="edu-school">ETH Zurich</span>
+              <span class="edu-detail" data-i18n="edu.eth">Master's in robotics and control · current</span>
+            </li>
+            <li>
+              <span class="edu-school">UPM — ETSI Industriales, Madrid</span>
+              <span class="edu-detail" data-i18n="edu.upm">Exchange during the 3rd year of my bachelor's</span>
+            </li>
+            <li>
+              <span class="edu-school">EPFL</span>
+              <span class="edu-detail" data-i18n="edu.epfl">Bachelor's in microengineering</span>
+            </li>
+            <li>
+              <span class="edu-school" data-i18n="edu.bac">French baccalauréat</span>
+              <span class="edu-detail" data-i18n="edu.bac.d">Maths and physics · 20/20 in maths, 19/20 in physics</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="wrap contact-inner">
+          <h2 data-i18n="contact.title">A question or a project in mind?</h2>
+          <p class="lead" data-i18n="contact.lead">
+            Write me by email or on LinkedIn. You can also find me on GitHub.
+          </p>
+          <p class="contact-links">
+            <a href="mailto:royer.yann+contact@free.fr">royer.yann+contact@free.fr</a>
+            <a
+              href="https://www.linkedin.com/in/yann-miguel-royer/"
+              rel="noreferrer noopener"
+              target="_blank"
+              data-i18n="contact.linkedin"
+              >Mon LinkedIn</a
+            >
+            <a
+              href="https://github.com/yann-royer"
+              rel="noreferrer noopener"
+              target="_blank"
+              >GitHub</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="year"></span> Yann Royer</p>
+        <a href="#haut" data-i18n="footer.top">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js?v=38"></script>
+    <script src="js/skills.js?v=13"></script>
+    <script src="js/main.js?v=26"></script>
+  </body>
+</html>

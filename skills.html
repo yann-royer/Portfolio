@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yann Royer — Skills</title>
+    <meta
+      name="description"
+      content="Yann Royer's skills, each linked to the projects where he used it."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=41" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f55c6' width='100' height='100' rx='6'/><text x='50' y='64' text-anchor='middle' font-size='46' font-weight='700' font-family='Arial Narrow, Arial, sans-serif' fill='%23ffffff'>YR</text></svg>" />
+  </head>
+  <body data-title-key="meta.title.skills" data-desc-key="meta.desc.skills">
+    <a class="skip-link" href="#contenu" data-i18n="skip">Skip to content</a>
+
+    <div id="haut" class="top-anchor" tabindex="-1"></div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="index.html">Yann Royer</a>
+        <nav id="menu" class="nav" aria-label="Primary">
+          <a href="index.html#projets" data-i18n="nav.projects">Projects</a>
+          <a href="index.html#competences" data-i18n="nav.skills">Skills</a>
+          <a href="index.html#apropos" data-i18n="nav.about">About</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+            <button type="button" data-lang="de" aria-pressed="false">DE</button>
+          </div>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+            <span class="sr-only" data-i18n="menu">Menu</span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <div id="skill-page">
+        <section class="page-hero skill-hero">
+          <div class="wrap">
+            <a class="back-link" href="index.html#competences" data-i18n="skills.back">← All skills</a>
+            <p class="skill-hero-group" id="skill-group" hidden></p>
+            <h1 id="skill-title">Skills</h1>
+            <p class="lead" id="skill-lead">Pick a skill to see every project where I used it.</p>
+          </div>
+        </section>
+
+        <section class="project-grid-section" id="skill-projects-section" hidden>
+          <div class="wrap">
+            <div class="mini-grid" id="skill-projects"></div>
+          </div>
+        </section>
+
+        <section class="skills skills-other" aria-labelledby="skill-index-title">
+          <div class="wrap">
+            <h2 id="skill-index-title">All skills</h2>
+            <div class="skill-index" id="skill-index"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="year"></span> Yann Royer</p>
+        <a href="#haut" data-i18n="footer.top">Back to top</a>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js?v=38"></script>
+    <script src="js/skills.js?v=13"></script>
+    <script src="js/main.js?v=26"></script>
+  </body>
+</html>

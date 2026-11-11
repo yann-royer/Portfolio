@@ -1,0 +1,12 @@
+# Local tools and editor settings
+.claude/
+
+# Kept on disk but not published
+layouts/
+assets/img/creasoft/
+css/styles.old.css
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini

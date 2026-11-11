@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yann Royer — FPGA alarm clock</title>
+    <meta
+      name="description"
+      content="An alarm clock built from logic gates on a DE10-Lite FPGA for the Logic Systems course at EPFL."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=41" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f55c6' width='100' height='100' rx='6'/><text x='50' y='64' text-anchor='middle' font-size='46' font-weight='700' font-family='Arial Narrow, Arial, sans-serif' fill='%23ffffff'>YR</text></svg>" />
+  </head>
+  <body data-title-key="meta.title.clock" data-desc-key="meta.desc.clock">
+    <a class="skip-link" href="#contenu" data-i18n="skip">Skip to content</a>
+
+    <div id="haut" class="top-anchor" tabindex="-1"></div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="index.html">Yann Royer</a>
+        <nav id="menu" class="nav" aria-label="Primary">
+          <a href="index.html#projets" data-i18n="nav.projects">Projects</a>
+          <a href="index.html#competences" data-i18n="nav.skills">Skills</a>
+          <a href="index.html#apropos" data-i18n="nav.about">About</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+            <button type="button" data-lang="de" aria-pressed="false">DE</button>
+          </div>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+            <span class="sr-only" data-i18n="menu">Menu</span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <article class="case">
+        <header class="case-hero wrap">
+          <div class="case-hero-copy">
+            <a class="back-link" href="school.html" data-i18n="case.back.school">← All school projects</a>
+            <h1 data-i18n="clock.title">FPGA alarm clock</h1>
+            <p class="lead" data-i18n="clock.summary">An alarm clock built from logic gates on a DE10-Lite FPGA board, with two alarms, a stopwatch, a timer, a metronome and a music player.</p>
+            <ul class="tag-list" aria-label="Tools">
+              <li>Logisim</li>
+              <li>FPGA</li>
+              <li data-i18n="clock.tag.fsm">State machine</li>
+              <li data-i18n="clock.tag.encoder">Rotary encoder</li>
+            </ul>
+            <dl class="facts">
+              <div>
+                <dt data-i18n="fact.course">Course</dt>
+                <dd data-i18n="course.logic">Logic Systems</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.school">School</dt>
+                <dd data-i18n="school.epfl.ba">EPFL, bachelor's in microengineering</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.team">Team</dt>
+                <dd data-i18n="vac.team">2 students</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.grade">Grade</dt>
+                <dd>6 / 6</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.board">Board</dt>
+                <dd>DE10-Lite</dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="case-media">
+            <img src="assets/img/alarm-clock/board.jpg" alt="DE10-Lite board showing an alarm setting on the seven-segment displays" data-i18n-alt="clock.board.alt" />
+            <figcaption data-i18n="clock.cap.board">Setting an alarm: alarm off, hour and minute of the alarm, metronome LED and menu button (labels in French)</figcaption>
+          </figure>
+        </header>
+
+        <div class="case-body wrap-narrow">
+          <section class="case-section">
+            <h2 data-i18n="clock.h.what">What it does</h2>
+            <p data-i18n="clock.what">A menu button cycles through eight functions, and a rotary encoder with a built-in button sets the values; the digit being set blinks. Each of the two alarms rings with a buzzer or one of three tunes. The metronome blinks an LED and beeps, and its tempo can be set with the encoder or by tapping it in.</p>
+          </section>
+          <section class="case-section">
+            <h2 data-i18n="clock.h.arch">Architecture</h2>
+            <p data-i18n="clock.arch">Everything is drawn in Logisim from gates, flip-flops, counters and ROMs, then loaded onto the FPGA. A 16-state machine holds the eight functions and their menu entries. Each button goes through two D flip-flops in a row, which turns a press of any length into a pulse of exactly one clock tick. Hours, minutes and seconds are binary numbers, converted to decimal digits for the seven-segment displays with the Double Dabble algorithm.</p>
+          </section>
+          <section class="case-section">
+            <h2 data-i18n="clock.h.music">Music and metronome</h2>
+            <p data-i18n="clock.music">The 24 notes over two octaves come from 24 clocks at different frequencies. Each tune is a ROM with one note per word, read by a counter that runs at the tempo of the tune. The metronome counts down at 128 Hz from the beat period. Converting between BPM and period needs a division, but Logisim's divider doesn't run on the FPGA and our own 16-bit divider was too large. Since the dividend is constant, we replaced it with a 256-entry lookup table.</p>
+          </section>
+        </div>
+
+        <nav class="case-nav wrap" aria-label="Projects" data-case-nav="alarm-clock"></nav>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="year"></span> Yann Royer</p>
+        <a href="#haut" data-i18n="footer.top">Back to top</a>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Photo">
+      <button type="button" class="lightbox-close" data-i18n-aria="lightbox.close" aria-label="Close">×</button>
+      <img alt="" />
+      <p class="lightbox-caption"></p>
+    </dialog>
+
+    <script src="js/i18n.js?v=38"></script>
+    <script src="js/skills.js?v=13"></script>
+    <script src="js/main.js?v=26"></script>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yann Royer — Soft robotic colonoscope</title>
+    <meta
+      name="description"
+      content="A soft robot for a colonoscopy competition in the Robotic Materials course at ETH Zurich."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=41" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f55c6' width='100' height='100' rx='6'/><text x='50' y='64' text-anchor='middle' font-size='46' font-weight='700' font-family='Arial Narrow, Arial, sans-serif' fill='%23ffffff'>YR</text></svg>" />
+  </head>
+  <body data-title-key="meta.title.rm" data-desc-key="meta.desc.rm">
+    <a class="skip-link" href="#contenu" data-i18n="skip">Skip to content</a>
+
+    <div id="haut" class="top-anchor" tabindex="-1"></div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="index.html">Yann Royer</a>
+        <nav id="menu" class="nav" aria-label="Primary">
+          <a href="index.html#projets" data-i18n="nav.projects">Projects</a>
+          <a href="index.html#competences" data-i18n="nav.skills">Skills</a>
+          <a href="index.html#apropos" data-i18n="nav.about">About</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+            <button type="button" data-lang="de" aria-pressed="false">DE</button>
+          </div>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+            <span class="sr-only" data-i18n="menu">Menu</span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <article class="case">
+        <header class="case-hero wrap">
+          <div class="case-hero-copy">
+            <a class="back-link" href="school.html" data-i18n="case.back.school">← All school projects</a>
+            <h1 data-i18n="rm.title">Soft robotic colonoscope</h1>
+            <p class="lead" data-i18n="rm.summary">A soft robot that has to navigate a colon phantom, remove polyps and come back out without pressing too hard on the walls, for the Robotic Materials competition at ETH.</p>
+            <ul class="tag-list" aria-label="Tools">
+              <li data-i18n="rm.tag.soft">Soft robotics</li>
+              <li data-i18n="rm.tag.force">Force sensing</li>
+              <li data-i18n="rm.tag.med">Medical robotics</li>
+            </ul>
+            <dl class="facts">
+              <div>
+                <dt data-i18n="fact.course">Course</dt>
+                <dd>Robotic Materials</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.school">School</dt>
+                <dd data-i18n="school.eth.ma">ETH Zurich, master's in robotics</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.term">Semester</dt>
+                <dd data-i18n="term.a2026">Autumn 2026</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.status">Status</dt>
+                <dd data-i18n="rm.status">In development, competition on 14 December 2026</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.grade">Grade</dt>
+                <dd data-i18n="card.ungraded">Ungraded</dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="case-media">
+            <img src="assets/img/robotic-materials/course.svg" alt="Schematic of the colon phantom: a winding tube with five numbered landmarks and polyps on the walls" data-i18n-alt="rm.course.alt" />
+            <figcaption data-i18n="rm.cap.course">Schematic of the course: entry at the bottom (rectum), sigmoid turn, descending colon, landmarks 1 to 5 and polyps in red</figcaption>
+          </figure>
+        </header>
+
+        <div class="case-body wrap-narrow">
+          <section class="case-section">
+            <h2 data-i18n="rm.h.challenge">The challenge</h2>
+            <p data-i18n="rm.challenge">Conventional colonoscopes are stiff and pushed from outside, which is uncomfortable and can injure the tissue; a soft robot follows the bends instead. In the competition, the robot enters a transparent polyurethane colon phantom through an elastic 30 mm opening, takes a sharp turn of about 90° in the sigmoid and goes up to the top of the descending colon, about 400 mm deep. There is no camera: we steer by looking through the phantom. The phantom stands on load cells, and every 2-second window where the net force on the wall goes over 2 N costs a point.</p>
+          </section>
+          <section class="case-section">
+            <h2 data-i18n="rm.h.score">How it is scored</h2>
+            <ol class="exercise-list">
+              <li>
+                <span class="exercise-num">1</span>
+                <span class="exercise-body">
+                  <span class="exercise-name" data-i18n="rm.s1">Navigation (30 points)</span>
+                  <span class="exercise-text" data-i18n="rm.s1.d">5 points per landmark reached, from the rectum to the top of the descending colon, then 5 more for pulling the robot back out.</span>
+                </span>
+              </li>
+              <li>
+                <span class="exercise-num">2</span>
+                <span class="exercise-body">
+                  <span class="exercise-name" data-i18n="rm.s2">Force sensing (15 points)</span>
+                  <span class="exercise-text" data-i18n="rm.s2.d">The robot measures how hard it presses on the wall. A control run without sensing shows whether the feedback changes the completion time, the peak force and the number of high-force events.</span>
+                </span>
+              </li>
+              <li>
+                <span class="exercise-num">3</span>
+                <span class="exercise-body">
+                  <span class="exercise-name" data-i18n="rm.s3">Polyp removal (15 points)</span>
+                  <span class="exercise-text" data-i18n="rm.s3.d">3 points per polyp removed (3 to 5 polyps of 6 or 10 mm), plus 6 if one is brought back out for a biopsy.</span>
+                </span>
+              </li>
+              <li>
+                <span class="exercise-num">4</span>
+                <span class="exercise-body">
+                  <span class="exercise-name" data-i18n="rm.s4">Gentle procedure (10 bonus points)</span>
+                  <span class="exercise-text" data-i18n="rm.s4.d">The net force on the phantom never goes over 2 N, once the robot has reached at least landmark 3.</span>
+                </span>
+              </li>
+            </ol>
+          </section>
+          <section class="case-section">
+            <h2 data-i18n="rm.h.ours">Our robot</h2>
+            <p data-i18n="rm.ours">In development. The design, the sensing and the competition result will be added after 14 December 2026.</p>
+          </section>
+        </div>
+
+        <nav class="case-nav wrap" aria-label="Projects" data-case-nav="robotic-materials"></nav>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="year"></span> Yann Royer</p>
+        <a href="#haut" data-i18n="footer.top">Back to top</a>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Photo">
+      <button type="button" class="lightbox-close" data-i18n-aria="lightbox.close" aria-label="Close">×</button>
+      <img alt="" />
+      <p class="lightbox-caption"></p>
+    </dialog>
+
+    <script src="js/i18n.js?v=38"></script>
+    <script src="js/skills.js?v=13"></script>
+    <script src="js/main.js?v=26"></script>
+  </body>
+</html>

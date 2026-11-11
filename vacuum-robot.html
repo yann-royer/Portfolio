@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yann Royer — Robot vacuum</title>
+    <meta
+      name="description"
+      content="Drive and guidance of a robot vacuum, written in AVR assembly for the Microcontrollers course at EPFL."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=41" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f55c6' width='100' height='100' rx='6'/><text x='50' y='64' text-anchor='middle' font-size='46' font-weight='700' font-family='Arial Narrow, Arial, sans-serif' fill='%23ffffff'>YR</text></svg>" />
+  </head>
+  <body data-title-key="meta.title.vac" data-desc-key="meta.desc.vac">
+    <a class="skip-link" href="#contenu" data-i18n="skip">Skip to content</a>
+
+    <div id="haut" class="top-anchor" tabindex="-1"></div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="index.html">Yann Royer</a>
+        <nav id="menu" class="nav" aria-label="Primary">
+          <a href="index.html#projets" data-i18n="nav.projects">Projects</a>
+          <a href="index.html#competences" data-i18n="nav.skills">Skills</a>
+          <a href="index.html#apropos" data-i18n="nav.about">About</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+            <button type="button" data-lang="de" aria-pressed="false">DE</button>
+          </div>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+            <span class="sr-only" data-i18n="menu">Menu</span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <article class="case">
+        <header class="case-hero wrap">
+          <div class="case-hero-copy">
+            <a class="back-link" href="school.html" data-i18n="case.back.school">← All school projects</a>
+            <h1 data-i18n="vac.title">Robot vacuum</h1>
+            <p class="lead" data-i18n="vac.summary">The drive and guidance of a robot vacuum that sweeps a rectangular room on its own, written entirely in assembly for an ATmega128L.</p>
+            <ul class="tag-list" aria-label="Tools">
+              <li data-i18n="vac.tag.asm">AVR assembly</li>
+              <li data-i18n="vac.tag.irq">Interrupts</li>
+              <li data-i18n="vac.tag.servo">Servos</li>
+              <li data-i18n="vac.tag.ir">IR sensor</li>
+              <li>WS2812B</li>
+            </ul>
+            <dl class="facts">
+              <div>
+                <dt data-i18n="fact.course">Course</dt>
+                <dd data-i18n="course.mcu">Microcontrollers</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.school">School</dt>
+                <dd data-i18n="school.epfl.ba">EPFL, bachelor's in microengineering</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.term">Semester</dt>
+                <dd data-i18n="term.s2025">Spring 2025</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.team">Team</dt>
+                <dd data-i18n="vac.team">2 students</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.grade">Grade</dt>
+                <dd>6 / 6</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.board">Board</dt>
+                <dd>STK-300, ATmega128L</dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="case-media">
+            <img src="assets/img/vacuum/faces.svg" alt="The four faces shown on the 8×8 LED matrix: asleep, happy, surprised and dead" data-i18n-alt="vac.faces.alt" />
+            <figcaption data-i18n="vac.cap.faces">Asleep (standby) · Happy (cleaning) · Surprised (wall ahead) · Dead (room finished). Drawn from the bitmaps in the code.</figcaption>
+          </figure>
+        </header>
+
+        <div class="case-body wrap-narrow">
+          <section class="case-section">
+            <h2 data-i18n="vac.h.what">What it does</h2>
+            <p data-i18n="vac.what">You put the robot in a corner of the room, facing the opposite wall. It drives straight until the infrared sensor sees a wall, then turns around with a sideways offset and starts the next lane. If there is a wall right after the offset, the room is done and it stops. The + and − buttons set the speed, shown on the LCD, and the pause button puts it to sleep. An 8×8 LED matrix shows its state with a face.</p>
+          </section>
+          <section class="case-section">
+            <h2 data-i18n="vac.h.code">How the code is organised</h2>
+            <p data-i18n="vac.code">Everything is written in AVR assembly, with one module per peripheral (servos, IR sensor, buttons, LED matrix, LCD) included in a main file. The main loop starts a distance measurement, prints the speed and jumps to a standby, wall or final loop. The buttons use the external interrupts INT0 to INT2 on rising edges, and the ADC raises an interrupt at the end of each conversion, so the program never waits for the sensor. Each face is 8 bytes in program memory, one bit per pixel, which a routine expands into colours and sends to the 64 WS2812B LEDs.</p>
+          </section>
+          <section class="case-section">
+            <h2 data-i18n="vac.h.servo">Driving the servos</h2>
+            <p data-i18n="vac.servo">The wheels are continuous-rotation servos, which need a 1 to 2 ms pulse every 20 ms. We wrote a library, servo8atSametime.asm, that cuts the 20 ms into ten 2 ms slots on a single 8-bit timer: the overflow interrupt raises the pin of the servo for the current slot and the compare interrupt drops it. That drives up to ten servos with one timer, with 128 steps over the useful 1 to 2 ms instead of about 12 with the built-in PWM. The final robot uses a simpler version on the 16-bit timer 1, with its two compare interrupts.</p>
+          </section>
+          <section class="case-section">
+            <h2 data-i18n="vac.h.bug">The bug that wasn't in the code</h2>
+            <p data-i18n="vac.bug">For a long time the servos refused to change speed, even though the signal on the pin had the right period and duty cycle. The problem was the power supply: the STK-300 board couldn't power the servos and rebooted at every speed change. An external supply fixed it.</p>
+          </section>
+        </div>
+
+        <div class="case-photos wrap">
+          <section class="photo-group">
+            <h2 data-i18n="vac.h.path">Path in a room</h2>
+            <div class="photo-grid photo-grid-single">
+              <figure class="photo">
+                <button type="button" class="shot" data-full="assets/img/vacuum/path.svg" data-caption-key="vac.cap.path" data-caption="Lanes across the room: start at the blue dot, stop at the red square when the green wall is reached" aria-label="Enlarge the diagram of the robot's path">
+                  <img src="assets/img/vacuum/path.svg" alt="Diagram of the robot sweeping a rectangular room in parallel lanes" data-i18n-alt="vac.path.alt" loading="lazy" />
+                </button>
+                <figcaption data-i18n="vac.cap.path">Lanes across the room: start at the blue dot, stop at the red square when the green wall is reached</figcaption>
+              </figure>
+            </div>
+          </section>
+        </div>
+
+        <nav class="case-nav wrap" aria-label="Projects" data-case-nav="vacuum-robot"></nav>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="year"></span> Yann Royer</p>
+        <a href="#haut" data-i18n="footer.top">Back to top</a>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Photo">
+      <button type="button" class="lightbox-close" data-i18n-aria="lightbox.close" aria-label="Close">×</button>
+      <img alt="" />
+      <p class="lightbox-caption"></p>
+    </dialog>
+
+    <script src="js/i18n.js?v=38"></script>
+    <script src="js/skills.js?v=13"></script>
+    <script src="js/main.js?v=26"></script>
+  </body>
+</html>

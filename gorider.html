@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yann Royer — GoRider</title>
+    <meta
+      name="description"
+      content="A device to train motocross starts on your own, with an ultrasonic sensor and LEDs. I sold a few units."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=41" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f55c6' width='100' height='100' rx='6'/><text x='50' y='64' text-anchor='middle' font-size='46' font-weight='700' font-family='Arial Narrow, Arial, sans-serif' fill='%23ffffff'>YR</text></svg>" />
+  </head>
+  <body data-title-key="meta.title.gorider" data-desc-key="gorider.summary">
+    <a class="skip-link" href="#contenu" data-i18n="skip">Skip to content</a>
+
+    <div id="haut" class="top-anchor" tabindex="-1"></div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="index.html">Yann Royer</a>
+        <nav id="menu" class="nav" aria-label="Primary">
+          <a href="index.html#projets" data-i18n="nav.projects">Projects</a>
+          <a href="index.html#competences" data-i18n="nav.skills">Skills</a>
+          <a href="index.html#apropos" data-i18n="nav.about">About</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+            <button type="button" data-lang="de" aria-pressed="false">DE</button>
+          </div>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+            <span class="sr-only" data-i18n="menu">Menu</span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <article class="case">
+        <header class="case-hero wrap">
+          <div class="case-hero-copy">
+            <a class="back-link" href="personal.html" data-i18n="case.back">← All personal projects</a>
+            <h1>GoRider</h1>
+            <p class="lead" data-i18n="gorider.summary">A device to train motocross starts on your own, with an ultrasonic sensor and LEDs. I sold a few units.</p>
+            <ul class="tag-list" aria-label="Tools">
+              <li>Ultrasonic</li>
+              <li>3D printing</li>
+              <li>LED</li>
+              <li>9V</li>
+            </ul>
+            <dl class="facts">
+              <div>
+                <dt data-i18n="fact.year">Year</dt>
+                <dd data-i18n="gorider.year">2021–2022</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.duration">Duration</dt>
+                <dd data-i18n="gorider.duration">6 months, from idea to sellable product</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.team">Team</dt>
+                <dd data-i18n="fact.solo">Solo</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.status">Status</dt>
+                <dd data-i18n="gorider.status">A few units sold, then stopped when I started my studies</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.cad">CAD</dt>
+                <dd>SolidWorks</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.elec">Electronics</dt>
+                <dd>Arduino Pro Mini</dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="case-media">
+            <img src="assets/img/gorider/grass-left.jpg" alt="Blue and orange GoRider units in the grass" />
+            <figcaption data-i18n="gorider.cap.grassL">GoRider on the grass</figcaption>
+          </figure>
+        </header>
+
+        <div class="case-body wrap-narrow">
+          <section class="case-section">
+            <h2 data-i18n="gorider.h.problem">The problem</h2>
+            <p data-i18n="gorider.t1">In motocross, it is really difficult to pass an opponent, even a weaker one. That is why the start accounts for 30% of a race’s final result. Currently, there is no device that lets riders train their starts on their own, without any help and without spending more than €200 on a starting gate.</p>
+          </section>
+          <figure class="case-embed">
+            <div class="video-frame video-frame-wide">
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/ZSEppHeZ7Wg"
+                title="MXGP motocross start — Trentino 2024"
+                data-i18n-title="gorider.video.title"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </div>
+            <figcaption class="video-source">
+              <span data-i18n="gorider.video.source">Source:</span>
+              <a href="https://www.youtube.com/watch?v=ZSEppHeZ7Wg" rel="noreferrer noopener" target="_blank">MXGP — YouTube</a>
+            </figcaption>
+          </figure>
+          <section class="case-section">
+            <h2 data-i18n="gorider.h.device">The device</h2>
+            <p data-i18n="gorider.t2">That’s why I created GoRider. I managed to sell a couple, but then I started my studies and abandoned the project.</p>
+          </section>
+          <section class="case-section">
+            <h2 data-i18n="gorider.h.how">How it works</h2>
+            <p data-i18n="gorider.how">You place GoRider where you want to start. The ultrasonic sensor works as a long-range presence sensor: as soon as the rider passes in front of it, the countdown begins.</p>
+            <ol class="steps">
+              <li data-i18n="gorider.step1">The red LED blinks slowly for 30 seconds, to give the rider time to get ready.</li>
+              <li data-i18n="gorider.step2">It then blinks fast, like the 15-second board being raised at a real motocross start.</li>
+              <li data-i18n="gorider.step3">The red LED stays on, like the 5-second board.</li>
+              <li data-i18n="gorider.step4">It waits a random time between 3 and 7 seconds. This trains the rider’s reflexes and mimics the random, human timing of the gate drop.</li>
+              <li data-i18n="gorider.step5">The red LED turns off and the green one turns on: the gate drops and the rider can go.</li>
+            </ol>
+          </section>
+        </div>
+
+        <div class="case-photos wrap">
+          <section class="photo-group">
+            <h2 data-i18n="gorider.h.components">Components</h2>
+            <p class="photo-intro" data-i18n="gorider.t3">These are the components of the device.</p>
+            <div class="photo-grid">
+              <figure class="photo">
+                <button type="button" class="shot" data-full="assets/img/gorider/grass-right.jpg" data-caption-key="gorider.cap.grassR" data-caption="GoRider LEDs and ultrasonic sensors" aria-label="Orange and blue GoRider units showing LEDs and ultrasonic sensors">
+                  <img src="assets/img/gorider/grass-right.jpg" alt="Orange and blue GoRider units showing LEDs and ultrasonic sensors" loading="lazy" />
+                </button>
+                <figcaption data-i18n="gorider.cap.grassR">GoRider LEDs and ultrasonic sensors</figcaption>
+              </figure>
+              <figure class="photo">
+                <button type="button" class="shot" data-full="assets/img/gorider/sensor.jpg" data-caption-key="gorider.cap.sensor" data-caption="Ultrasonic distance sensor · ON/OFF button" aria-label="GoRider: ultrasonic distance sensor and ON/OFF button">
+                  <img src="assets/img/gorider/sensor.jpg" alt="GoRider: ultrasonic distance sensor and ON/OFF button" loading="lazy" />
+                </button>
+                <figcaption data-i18n="gorider.cap.sensor">Ultrasonic distance sensor · ON/OFF button</figcaption>
+              </figure>
+              <figure class="photo">
+                <button type="button" class="shot" data-full="assets/img/gorider/battery.jpg" data-caption-key="gorider.cap.battery" data-caption="Product logo · Battery compartment with its 2 countersunk screws" aria-label="GoRider: product logo and 9V battery compartment">
+                  <img src="assets/img/gorider/battery.jpg" alt="GoRider: product logo and 9V battery compartment" loading="lazy" />
+                </button>
+                <figcaption data-i18n="gorider.cap.battery">Product logo · Battery compartment with its 2 countersunk screws</figcaption>
+              </figure>
+            </div>
+          </section>
+          <section class="photo-group">
+            <h2 data-i18n="gorider.h.proto">Waterproofing test</h2>
+            <p class="photo-intro" data-i18n="gorider.t4">Here you can see one of the first prototypes I made to test whether the box was waterproof.</p>
+            <div class="photo-grid photo-grid-single">
+              <figure class="photo">
+                <button type="button" class="shot" data-full="assets/img/gorider/gasket.jpg" data-caption-key="gorider.cap.gasket" data-caption="1st prototype with a gasket that passed the water resistance test" aria-label="First GoRider prototype with gasket joint">
+                  <img src="assets/img/gorider/gasket.jpg" alt="First GoRider prototype with gasket joint" loading="lazy" />
+                </button>
+                <figcaption data-i18n="gorider.cap.gasket">1st prototype with a gasket that passed the water resistance test</figcaption>
+              </figure>
+            </div>
+          </section>
+        </div>
+
+        <nav class="case-nav wrap" aria-label="Projects">
+          <a class="case-nav-link is-prev" href="rc-car.html">
+            <span class="case-nav-label" data-i18n="case.prev">Previous project</span>
+            <span class="case-nav-name">RC Car</span>
+          </a>
+          <a class="case-nav-link is-next" href="lap-timer.html">
+            <span class="case-nav-label" data-i18n="case.next">Next project</span>
+            <span class="case-nav-name">Lap Timer</span>
+          </a>
+        </nav>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="year"></span> Yann Royer</p>
+        <a href="#haut" data-i18n="footer.top">Back to top</a>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Photo">
+      <button type="button" class="lightbox-close" data-i18n-aria="lightbox.close" aria-label="Close">×</button>
+      <img alt="" />
+      <p class="lightbox-caption"></p>
+    </dialog>
+
+    <script src="js/i18n.js?v=38"></script>
+    <script src="js/main.js?v=26"></script>
+  </body>
+</html>

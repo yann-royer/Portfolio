@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yann Royer — FlyForce</title>
+    <meta
+      name="description"
+      content="FlyForce: a 3-axis flexure force sensor designed in the Mechanism Design II course at EPFL."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=41" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f55c6' width='100' height='100' rx='6'/><text x='50' y='64' text-anchor='middle' font-size='46' font-weight='700' font-family='Arial Narrow, Arial, sans-serif' fill='%23ffffff'>YR</text></svg>" />
+  </head>
+  <body data-title-key="meta.title.ff" data-desc-key="meta.desc.ff">
+    <a class="skip-link" href="#contenu" data-i18n="skip">Skip to content</a>
+
+    <div id="haut" class="top-anchor" tabindex="-1"></div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="index.html">Yann Royer</a>
+        <nav id="menu" class="nav" aria-label="Primary">
+          <a href="index.html#projets" data-i18n="nav.projects">Projects</a>
+          <a href="index.html#competences" data-i18n="nav.skills">Skills</a>
+          <a href="index.html#apropos" data-i18n="nav.about">About</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+            <button type="button" data-lang="de" aria-pressed="false">DE</button>
+          </div>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+            <span class="sr-only" data-i18n="menu">Menu</span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <article class="case">
+        <header class="case-hero wrap">
+          <div class="case-hero-copy">
+            <a class="back-link" href="school.html" data-i18n="case.back.school">← All school projects</a>
+            <h1>FlyForce</h1>
+            <p class="lead" data-i18n="ff.summary">A 3-axis force sensor for a measuring probe, built only from flexure hinges and balanced so that the robot's accelerations don't show up in the measurement.</p>
+            <ul class="tag-list" aria-label="Tools">
+              <li data-i18n="ff.tag.flex">Flexure hinges</li>
+              <li data-i18n="ff.tag.balance">Dynamic balancing</li>
+              <li data-i18n="ff.tag.cap">Capacitive sensors</li>
+              <li>FEM</li>
+            </ul>
+            <dl class="facts">
+              <div>
+                <dt data-i18n="fact.course">Course</dt>
+                <dd data-i18n="course.cdm2">Mechanism Design II</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.school">School</dt>
+                <dd data-i18n="school.epfl.ba">EPFL, bachelor's in microengineering</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.team">Team</dt>
+                <dd data-i18n="ff.team">5 students</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.grade">Grade</dt>
+                <dd>5.25 / 6</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.status">Status</dt>
+                <dd data-i18n="ff.status">Designed and sized on paper, not built</dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="case-media">
+            <img src="assets/img/flyforce/cad.jpg" alt="CAD model of the FlyForce mechanism: vertical bar, flexure arms and one counterweight" data-i18n-alt="ff.cad.alt" />
+            <figcaption data-i18n="ff.cap.cad">The mechanism in flexures. Only one of the three outer counterweights is shown.</figcaption>
+          </figure>
+        </header>
+
+        <div class="case-body wrap-narrow">
+          <section class="case-section">
+            <h2 data-i18n="ff.h.brief">The brief</h2>
+            <p data-i18n="ff.brief">A 200 mm stylus with a sapphire ball touches the part being measured. The sensor has to measure the contact force along x, y and z (±5 N, with a resolution under 1.5 mN and a stiffness of 5 N/mm), while the robot carrying it accelerates at up to 6 m/s² and turns at up to 5 rad/s. The guiding had to use flexures only: no friction and no play.</p>
+          </section>
+          <section class="case-section">
+            <h2 data-i18n="ff.h.how">How it works</h2>
+            <p data-i18n="ff.how">The stylus is fixed to a vertical bar that tilts around a point P for x and y, and moves along z thanks to three arms set 120° apart. Four counterweights keep the centre of mass on P, so gravity and linear accelerations don't move the stylus, and the symmetry of the arms cancels the moments as well. Three Micro-Epsilon capacitive sensors read the displacement: a CSH3FL for z and two CSH05FL for x and y.</p>
+          </section>
+          <section class="case-section">
+            <h2 data-i18n="ff.h.sizing">Sizing</h2>
+            <p data-i18n="ff.sizing">We wrote the stiffness of the whole mechanism from the strain energy of its 21 hinges, as a function of the force direction and the stylus displacement. We then tuned each hinge until the stiffness stayed at 5 N/mm in every direction. All the hinges are steel notch hinges, between 0.08 and 0.63 mm thick, and each one stays under its fatigue limit for 10 years of use.</p>
+          </section>
+          <section class="case-section">
+            <h2 data-i18n="ff.h.results">Results</h2>
+            <p data-i18n="ff.results">The sensor fits in a 179.5 mm × Ø84 mm cylinder and weighs 810 g (the limit was 1 kg). The force resolution is 0.3 mN, and the natural frequency is 94 Hz in the xy plane and 14 Hz along z. One requirement is missed: because the counterweights are heavy, spinning the sensor around z at 5 rad/s causes an error of up to 0.15 N. To stay under 15 mN, that rotation has to be limited to 1.6 rad/s.</p>
+          </section>
+          <section class="case-section">
+            <h2 data-i18n="ff.h.make">Manufacturing</h2>
+            <p data-i18n="ff.make">There are no blades, only notch hinges, so each arm is a flat part cut in one pass by wire EDM. The central shaft is turned, then milled. The flexures are in Böhler K190 steel, the counterweights in 42CrMo4 and the rest in 7075 aluminium.</p>
+          </section>
+        </div>
+
+        <div class="case-photos wrap">
+          <section class="photo-group">
+            <h2 data-i18n="ff.h.fem">Simulation</h2>
+            <div class="photo-grid photo-grid-single">
+              <figure class="photo">
+                <button type="button" class="shot" data-full="assets/img/flyforce/fem.jpg" data-caption-key="ff.cap.fem" data-caption="FEM: the mechanism under a 5 N force on the stylus ball" aria-label="Enlarge the FEM simulation of the mechanism">
+                  <img src="assets/img/flyforce/fem.jpg" alt="FEM simulation of the mechanism, the stylus bending under a 5 N force" data-i18n-alt="ff.fem.alt" loading="lazy" />
+                </button>
+                <figcaption data-i18n="ff.cap.fem">FEM: the mechanism under a 5 N force on the stylus ball</figcaption>
+              </figure>
+            </div>
+          </section>
+        </div>
+        <nav class="case-nav wrap" aria-label="Projects" data-case-nav="flyforce"></nav>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="year"></span> Yann Royer</p>
+        <a href="#haut" data-i18n="footer.top">Back to top</a>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Photo">
+      <button type="button" class="lightbox-close" data-i18n-aria="lightbox.close" aria-label="Close">×</button>
+      <img alt="" />
+      <p class="lightbox-caption"></p>
+    </dialog>
+
+    <script src="js/i18n.js?v=38"></script>
+    <script src="js/skills.js?v=13"></script>
+    <script src="js/main.js?v=26"></script>
+  </body>
+</html>

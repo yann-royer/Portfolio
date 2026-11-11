@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yann Royer — Lap Timer</title>
+    <meta
+      name="description"
+      content="A lap timer for MTB, BMX or motocross tracks that starts on its own and shows the time of each lap."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css?v=41" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%230f55c6' width='100' height='100' rx='6'/><text x='50' y='64' text-anchor='middle' font-size='46' font-weight='700' font-family='Arial Narrow, Arial, sans-serif' fill='%23ffffff'>YR</text></svg>" />
+  </head>
+  <body data-title-key="meta.title.lap" data-desc-key="lap.summary">
+    <a class="skip-link" href="#contenu" data-i18n="skip">Skip to content</a>
+
+    <div id="haut" class="top-anchor" tabindex="-1"></div>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="logo" href="index.html">Yann Royer</a>
+        <nav id="menu" class="nav" aria-label="Primary">
+          <a href="index.html#projets" data-i18n="nav.projects">Projects</a>
+          <a href="index.html#competences" data-i18n="nav.skills">Skills</a>
+          <a href="index.html#apropos" data-i18n="nav.about">About</a>
+          <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+            <button type="button" data-lang="de" aria-pressed="false">DE</button>
+          </div>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu">
+            <span class="sr-only" data-i18n="menu">Menu</span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <article class="case">
+        <header class="case-hero wrap">
+          <div class="case-hero-copy">
+            <a class="back-link" href="personal.html" data-i18n="case.back">← All personal projects</a>
+            <h1>Lap Timer</h1>
+            <p class="lead" data-i18n="lap.summary">A lap timer for MTB, BMX or motocross tracks that starts on its own and shows the time of each lap.</p>
+            <ul class="tag-list" aria-label="Tools">
+              <li>Ultrasonic</li>
+              <li>LCD</li>
+              <li>Laser</li>
+              <li>3D printing</li>
+            </ul>
+            <dl class="facts">
+              <div>
+                <dt data-i18n="fact.year">Year</dt>
+                <dd data-i18n="lap.year">Early 2021</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.duration">Duration</dt>
+                <dd data-i18n="lap.duration">1 week</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.team">Team</dt>
+                <dd data-i18n="fact.solo">Solo</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.status">Status</dt>
+                <dd data-i18n="lap.status">Used for over a year to get better at motocross</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.cad">CAD</dt>
+                <dd>SolidWorks</dd>
+              </div>
+              <div>
+                <dt data-i18n="fact.elec">Electronics</dt>
+                <dd>Arduino Pro Mini</dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="case-media">
+            <img src="assets/img/lap-timer/sensors.jpg" alt="Orange Lap Timer: ultrasonic distance sensor and power switch" />
+            <figcaption data-i18n="lap.cap.orange">Power switch · Ultrasonic distance sensor</figcaption>
+          </figure>
+        </header>
+
+        <div class="case-body wrap-narrow">
+          <section class="case-section">
+            <h2 data-i18n="lap.h.final">Final version</h2>
+            <p data-i18n="lap.final">Final version of the lap timer. Its purpose is to let users time each of their laps in any sport that involves going around a circuit or a track (e.g. MTB, BMX, motocross). How to use it: place the lap timer by the circuit or track. The timer starts automatically after the 1st pass in front of it, then keeps running for the following laps. When the laps are done, press the button and the time of each lap is displayed on the screen.</p>
+            <p data-i18n="lap.p1">The lap timer in the pictures has been used a couple of times, and the melted area on top is due to improper use.</p>
+          </section>
+          <section class="case-section">
+            <h2 data-i18n="lap.h.poc">Proof of concept</h2>
+            <p data-i18n="lap.poc">Proof of concept: these are pictures of the 1st prototype, which included 2 measurement methods: one with an ultrasonic distance sensor, and one with a laser, a mirror and a light sensor. The distance sensor worked well, but during the 1st lap, ground vibrations made the mirror or the main box move slightly, and the laser no longer pointed at the sensor.</p>
+          </section>
+        </div>
+
+        <div class="case-photos wrap">
+          <section class="photo-group">
+            <h2 data-i18n="lap.h.final">Final version</h2>
+            <div class="photo-grid photo-grid-single">
+              <figure class="photo">
+                <button type="button" class="shot" data-full="assets/img/lap-timer/display.jpg" data-caption-key="lap.cap.display" data-caption="Button to navigate through the menus · LCD display" aria-label="Orange Lap Timer: LCD display and menu button">
+                  <img src="assets/img/lap-timer/display.jpg" alt="Orange Lap Timer: LCD display and menu button" loading="lazy" />
+                </button>
+                <figcaption data-i18n="lap.cap.display">Button to navigate through the menus · LCD display</figcaption>
+              </figure>
+            </div>
+          </section>
+          <section class="photo-group">
+            <h2 data-i18n="lap.h.poc">Proof of concept</h2>
+            <div class="photo-grid">
+              <figure class="photo">
+                <button type="button" class="shot" data-full="assets/img/lap-timer/black-sensors.jpg" data-caption-key="lap.cap.black" data-caption="Laser · Power switch · Light sensor · Ultrasonic distance sensor" aria-label="Lap Timer: laser, power switch, light sensor, ultrasonic sensor">
+                  <img src="assets/img/lap-timer/black-sensors.jpg" alt="Lap Timer: laser, power switch, light sensor, ultrasonic sensor" loading="lazy" />
+                </button>
+                <figcaption data-i18n="lap.cap.black">Laser · Power switch · Light sensor · Ultrasonic distance sensor</figcaption>
+              </figure>
+              <figure class="photo">
+                <button type="button" class="shot" data-full="assets/img/lap-timer/black-lcd.jpg" data-caption-key="lap.cap.lcd" data-caption="LCD display · Joystick to navigate through the menus" aria-label="Lap Timer: LCD display and joystick">
+                  <img src="assets/img/lap-timer/black-lcd.jpg" alt="Lap Timer: LCD display and joystick" loading="lazy" />
+                </button>
+                <figcaption data-i18n="lap.cap.lcd">LCD display · Joystick to navigate through the menus</figcaption>
+              </figure>
+              <figure class="photo">
+                <button type="button" class="shot" data-full="assets/img/lap-timer/mirror.jpg" data-caption-key="lap.cap.mirror" data-caption="Slot for the mirror · Screw to adjust the base&#x27;s angle · Transport slot for the mirror" aria-label="Lap Timer: mirror slot and angle adjustment screws">
+                  <img src="assets/img/lap-timer/mirror.jpg" alt="Lap Timer: mirror slot and angle adjustment screws" loading="lazy" />
+                </button>
+                <figcaption data-i18n="lap.cap.mirror">Slot for the mirror · Screw to adjust the base&#x27;s angle · Transport slot for the mirror</figcaption>
+              </figure>
+            </div>
+          </section>
+        </div>
+
+        <nav class="case-nav wrap" aria-label="Projects">
+          <a class="case-nav-link is-prev" href="gorider.html">
+            <span class="case-nav-label" data-i18n="case.prev">Previous project</span>
+            <span class="case-nav-name">GoRider</span>
+          </a>
+          <a class="case-nav-link is-next" href="alarm.html">
+            <span class="case-nav-label" data-i18n="case.next">Next project</span>
+            <span class="case-nav-name">Alarm Clock Enhancer</span>
+          </a>
+        </nav>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="year"></span> Yann Royer</p>
+        <a href="#haut" data-i18n="footer.top">Back to top</a>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Photo">
+      <button type="button" class="lightbox-close" data-i18n-aria="lightbox.close" aria-label="Close">×</button>
+      <img alt="" />
+      <p class="lightbox-caption"></p>
+    </dialog>
+
+    <script src="js/i18n.js?v=38"></script>
+    <script src="js/main.js?v=26"></script>
+  </body>
+</html>
