@@ -261,16 +261,16 @@ Le site est 100 % statique et hébergé avec **GitHub Pages**. Le dossier est un
 
 ### Première publication (une seule fois)
 
-1. Sur github.com, créer un dépôt **public** nommé `Portfolio`, sans README ni licence (le dépôt doit être vide).
+1. Le dépôt GitHub existe déjà : `yann-royer/portfolio` (public). L'historique local part de son premier commit, donc le push se fait sans rien écraser.
 2. Dans un terminal, dans le dossier du site :
 
    ```bash
-   git remote add origin https://github.com/yann-royer/Portfolio.git
+   git remote add origin https://github.com/yann-royer/portfolio.git
    git push -u origin main
    ```
 
 3. Sur GitHub : **Settings → Pages → Build and deployment → Source : Deploy from a branch**, choisir `main` et `/ (root)`, puis **Save**.
-4. Après une à deux minutes, le site est en ligne à <https://yann-royer.github.io/Portfolio/>.
+4. Après une à deux minutes, le site est en ligne à <https://yann-royer.github.io/portfolio/>.
 
 ### Mettre à jour le site
 
