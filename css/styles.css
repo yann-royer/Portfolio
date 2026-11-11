@@ -1533,11 +1533,7 @@ p:last-child {
   border-top: 1px solid var(--ink);
 }
 
-.education {
-  margin-top: 80px;
-}
-
-.education h3 {
+.education h2 {
   font-size: clamp(1.5rem, 2.4vw, 1.9rem);
 }
 
